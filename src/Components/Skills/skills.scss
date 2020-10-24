@@ -1,0 +1,38 @@
+@import "src/Static/styles.scss";
+
+.skills {
+  width: 100%;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 200px));
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: outside none none;
+    padding: 0;
+
+    @media screen and (max-width: 450px) {
+      grid-template-columns: repeat(1, minmax(50%, 200px));
+    }
+
+    li {
+      margin-top: 25px;
+      font-size: 20px;
+    }
+
+    li:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url('../../assets/icons/arrow.svg') no-repeat center;
+      background-size: contain;
+      margin-right: 10px;
+    }
+  }
+}

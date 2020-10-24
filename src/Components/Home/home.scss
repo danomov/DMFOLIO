@@ -1,0 +1,11 @@
+section {
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
+  margin-top: 150px;
+
+  > .inner-wrapper {
+    max-width: 1200px;
+  }
+}
+

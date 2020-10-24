@@ -1,0 +1,30 @@
+@import "src/Static/styles";
+
+  .preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    flex-grow: 1;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      color: $cyan;
+    }
+
+    h2 {
+      font-size: 3.5em;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .description-container {
+      max-width: 600px;
+
+      p {
+        font-size: 1.5em;
+      }
+    }
+  }
