@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./app.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../Components/Home";
@@ -20,6 +20,6 @@ const App = () => {
       </Router>
     </div>
   );
-}
+};
 
 export default App;

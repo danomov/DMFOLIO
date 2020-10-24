@@ -29,47 +29,47 @@ header {
     padding-top: 20px;;
   }
 
-  nav.mobile-menu {
-    position: fixed;
-    height: 100vh;
-    width: 50vw;
-    top: 0;
-    transform: translateX(100vw);
-    margin-top: 0;
-    transition: all 0.5s ease-out;
-    display: none;
+  nav {
+    margin-top: 20px;
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
+    &.mobile-menu {
+      position: fixed;
+      height: 100vh;
+      width: 50vw;
+      top: 0;
+      transform: translateX(100vw);
+      margin-top: 0;
+      transition: all 0.5s ease-out;
+      display: none;
 
-      li:not(:first-child) {
-        margin-top: 30px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        li:not(:first-child) {
+          margin-top: 30px;
+        }
       }
     }
-  }
 
-  nav.open {
-    background-color: $semi-dark-blue;
-    transform: translateX(46vw);
-    transition: all 0.5s ease-in-out;
-    z-index: 99;
-    display: initial;
-  }
+    &.open {
+      background-color: $semi-dark-blue;
+      transform: translateX(46vw);
+      transition: all 0.5s ease-in-out;
+      z-index: 99;
+      display: initial;
+    }
 
-  nav.mobile-menu.open + .menu-button {
+    &.mobile-menu.open + .menu-button {
       position: fixed;
       right: 20px;
       background: url("../../assets/icons/close-button.svg") no-repeat center;
       background-size: contain;
-  }
-
-  nav {
-    margin-top: 20px;
+    }
   }
 
   ul,
@@ -88,11 +88,11 @@ header {
         font-size: 1.2em;
         outline: none;
         transition: color 0.2s ease-in;
-      }
 
-      a:hover {
-        color: $light-grey;
-        transition: color 0.2s ease-out;
+        &:hover {
+          color: $light-grey;
+          transition: color 0.2s ease-out;
+        }
       }
     }
   }

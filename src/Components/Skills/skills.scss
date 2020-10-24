@@ -11,7 +11,7 @@
   ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(50%, 200px));
-    margin: 20px 0px 0px;
+    margin: 20px 0 0;
     overflow: hidden;
     list-style: outside none none;
     padding: 0;
@@ -23,16 +23,16 @@
     li {
       margin-top: 25px;
       font-size: 20px;
-    }
 
-    li:before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      background: url('../../assets/icons/arrow.svg') no-repeat center;
-      background-size: contain;
-      margin-right: 10px;
+      &:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url('../../assets/icons/flag.svg') no-repeat center;
+        background-size: contain;
+        margin-right: 10px;
+      }
     }
   }
 }

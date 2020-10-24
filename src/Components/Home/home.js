@@ -8,16 +8,16 @@ import Projects from "../Projects";
 import Contact from "../Contact/contact";
 
 const Home = () => {
-    return (
-      <div className="home-page-container">
-        <Preview />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
-    );
-}
+  return (
+    <div className="home-page-container">
+      <Preview />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+    </div>
+  );
+};
 
 export default Home;

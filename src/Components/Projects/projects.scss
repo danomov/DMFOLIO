@@ -54,15 +54,15 @@
         transform: scale(1.2);
         transition: transform 0.2s ease-in;
       }
-    }
 
-    a.git {
-      background: url("../../assets/icons/github.svg") no-repeat center;
-      background-size: contain;
-    }
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
 
-    a:not(:last-child) {
-      margin-right: 20px;
+      &.git {
+        background: url("../../assets/icons/github.svg") no-repeat center;
+        background-size: contain;
+      }
     }
   }
 }
