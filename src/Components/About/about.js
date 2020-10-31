@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "../../Static";
 import "./about.scss";
+import Loader from "../Loader";
 
 export default function About() {
   const { about } = data;
+  const [isLoadingImage, setIsLoadingImage] = useState(true);
+
+  const handleSetImageStatus = () => {
+    setIsLoadingImage(prevState => !prevState);
+  };
 
   return (
     <section
@@ -19,7 +25,8 @@ export default function About() {
           <p>{about.description}</p>
         </div>
         <div className="about-portrait">
-          <img src={about.portrait} alt="portrait_picture" />
+          {isLoadingImage && <Loader hasWrapper />}
+          <img src={about.portrait} alt="portrait_picture" onLoad={handleSetImageStatus} />
         </div>
       </div>
     </section>
