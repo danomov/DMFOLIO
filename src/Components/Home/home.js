@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import Loader from "../Loader";
 import "./home.scss";
+import { withHeader, withAudio } from "../../HOC";
 
 const Preview = lazy(() => import("../Preview"));
 const About = lazy(() => import("../About"));
@@ -24,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withHeader(withAudio(Home));
