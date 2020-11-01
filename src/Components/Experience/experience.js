@@ -54,8 +54,8 @@ export default function Experience() {
               )}
             </p>
             <ul className="experience-responsibilities">
-              {expList[selectedTab].responsibilities.map((responsibility) => (
-                <li>{responsibility}</li>
+              {expList[selectedTab].responsibilities.map(responsibility => (
+                <li key={Math.random() * 500}>{responsibility}</li>
               ))}
             </ul>
           </div>
