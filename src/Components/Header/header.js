@@ -42,7 +42,7 @@ export default function Header() {
       >
         <ul>
           {headerList.map((headerEl) => (
-            <li>
+            <li key={Math.random() * 500}>
               <a href={`/#${headerEl.toLowerCase()}`}>{headerEl}</a>
             </li>
           ))}

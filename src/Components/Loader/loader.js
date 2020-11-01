@@ -6,7 +6,7 @@ const Loader = ({ count = 9, hasWrapper = false }) => {
     <div className={hasWrapper && "loader-wrapper"}>
       <div className="dots">
         {new Array(count).fill(0).map(() => (
-          <div />
+          <div key={Math.random() * 500} />
         ))}
       </div>
     </div>
