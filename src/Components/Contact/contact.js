@@ -3,7 +3,7 @@ import { data } from "../../Static";
 import "./contact.scss";
 import Button from "../Button/button";
 
-export default function Contact() {
+const Contact = () => {
   const { contacts } = data;
 
   const handleSocialClasses = useCallback(link => {
@@ -14,13 +14,15 @@ export default function Contact() {
     });
 
     return targetSocial;
-  }, []);
+  }, [])
 
   return (
     <section
       id="contact"
       className="contacts-container"
       data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
     >
@@ -73,3 +75,5 @@ export default function Contact() {
     </section>
   );
 }
+
+export default Contact;

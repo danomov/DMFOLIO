@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, {useCallback, useState} from "react";
 import { data } from "../../Static";
 import "./projects.scss";
 import Button from "../Button";
 
-export default function Projects() {
+const Projects = () => {
   const [isShowingAll, setIsShowingAll] = useState(false);
   const { projects } = data;
 
-  const handleShowAll = () => {
+  const handleShowAll = useCallback(() => {
     setIsShowingAll(prevState => !prevState);
-  };
+  }, [setIsShowingAll])
 
   return (
     <section
       id="projects"
       className="projects-container"
       data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
     >
@@ -53,3 +55,5 @@ export default function Projects() {
     </section>
   );
 }
+
+export default Projects;
