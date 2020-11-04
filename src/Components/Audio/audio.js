@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import background from "../../assets/audio/background.mp3";
+import background_music from "../../assets/audio/background_music.mp3";
 import "./audio.scss";
 
 const Audio = () => {
@@ -7,19 +7,19 @@ const Audio = () => {
 
   const handleGetAudioPlayer = useCallback(() => {
     return document.querySelector("audio");
-  }, []);
+  }, [])
 
-  const handleAudioMuteControls = () => {
+  const handleAudioMuteControls = useCallback(() => {
     const audio = handleGetAudioPlayer();
-    setIsMuted(!isMuted);
+    setIsMuted(!isMuted)
 
     if (isMuted) return audio.play();
     audio.pause();
-  };
+  }, [isMuted, setIsMuted, handleGetAudioPlayer])
 
   return (
     <>
-      <audio src={background} loop />
+      <audio src={background_music} loop />
       <button
         className={`audio-control ${isMuted ? "muted" : ""}`}
         onClick={handleAudioMuteControls}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./header.scss";
 import { data } from "../../Static";
 
-export default function Header() {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { headerList } = data;
@@ -11,13 +11,13 @@ export default function Header() {
   const handleViewUpdate = useCallback(() => {
     const viewport = window.innerWidth;
     viewport < 992 ? setIsMobile(true) : setIsMobile(false);
-  }, [setIsMobile]);
+  }, [setIsMobile])
 
   const handleLoadNavigationMenu = useCallback(() => {
     const navMenu = document.querySelector("nav");
     if (navMenu && isMobile)
       setTimeout(() => (navMenu.style.display = "initial"), 500);
-  }, [isMobile]);
+  }, [isMobile])
 
   useEffect(() => {
     handleViewUpdate();
@@ -26,7 +26,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("resize", handleViewUpdate);
     };
-  }, [handleLoadNavigationMenu, handleViewUpdate]);
+  }, [handleLoadNavigationMenu, handleViewUpdate])
 
   const handleToggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -54,3 +54,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

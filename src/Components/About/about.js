@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { data } from "../../Static";
 import "./about.scss";
-import Loader from "../Loader";
+import Image from "../Image/image";
 
-export default function About() {
+const About = () => {
   const { about } = data;
-  const [isLoadingImage, setIsLoadingImage] = useState(true);
-
-  const handleSetImageStatus = () => {
-    setIsLoadingImage(prevState => !prevState);
-  };
 
   return (
     <section
       id="about"
       className="about-container"
       data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
     >
@@ -24,11 +21,14 @@ export default function About() {
         <div className="about-text">
           <p>{about.description}</p>
         </div>
-        <div className="about-portrait">
-          {isLoadingImage && <Loader hasWrapper />}
-          <img src={about.portrait} alt="portrait_picture" onLoad={handleSetImageStatus} />
-        </div>
+        <Image
+            containerClassName="about-portrait"
+            src={about.portrait}
+            alt="portrait_picture"
+        />
       </div>
     </section>
   );
 }
+
+export default About;
