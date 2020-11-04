@@ -1,7 +1,7 @@
 @import "src/Static/styles.scss";
 
 .contacts {
-  padding-bottom: 150px;
+  padding-bottom: 300px;
 
   > h1 {
     font-size: 2em;
@@ -69,49 +69,5 @@
   .contact-me-btn-container {
     display: flex;
     margin: 30px 0;
-
-    a {
-      width: 100px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      border: 2px solid $cyan;
-      border-radius: 5px;
-      color: $cyan;
-      transition: transform 0.3s ease-in;
-
-      &:hover {
-        color: white;
-        border-color: white;
-        transform: scale(1.1);
-        transition: transform 0.2s ease-in;
-      }
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-    }
-  }
-
-  .resume-btn {
-    width: 100px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border: 2px solid $cyan;
-    border-radius: 5px;
-    color: $cyan;
-    transition: transform 0.3s ease-in;
-
-    &:hover {
-      color: white;
-      border-color: white;
-      transform: scale(1.1);
-      transition: transform 0.2s ease-in;
-    }
   }
 }

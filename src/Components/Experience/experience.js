@@ -1,28 +1,30 @@
-import React, { useState } from "react";
+import React, {useCallback, useState} from "react";
 import { data } from "../../Static";
 import "./experience.scss";
 
-export default function Experience() {
+const Experience = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const { experience } = data;
   const expList = [...experience.work_places].reverse();
 
-  const handleExperienceDate = (startY, endY, startMo, endMo) => {
+  const handleExperienceDate = useCallback((startY, endY, startMo, endMo) => {
     if (!startY) return "-";
     return !startMo || !endMo
       ? `${startY} - ${endY ? endY : "Present"}`
       : `${startMo} ${startY} - ${endY ? `${endMo} ${endY}` : "Present"}`;
-  };
+  }, [])
 
-  const handleChangeTab = (tabIndex) => {
+  const handleChangeTab = useCallback(tabIndex => {
     return () => setSelectedTab(tabIndex);
-  };
+  }, [setSelectedTab])
 
   return (
     <section
       id="experience"
       className="experience-container"
       data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
     >
@@ -54,8 +56,8 @@ export default function Experience() {
               )}
             </p>
             <ul className="experience-responsibilities">
-              {expList[selectedTab].responsibilities.map((responsibility) => (
-                <li>{responsibility}</li>
+              {expList[selectedTab].responsibilities.map(responsibility => (
+                <li key={Math.random() * 500}>{responsibility}</li>
               ))}
             </ul>
           </div>
@@ -64,3 +66,5 @@ export default function Experience() {
     </section>
   );
 }
+
+export default Experience;

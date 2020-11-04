@@ -1,23 +1,28 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
+import Loader from "../Loader";
 import "./home.scss";
-import Preview from "../Preview";
-import About from "../About";
-import Skills from "../Skills";
-import Experience from "../Experience";
-import Projects from "../Projects";
-import Contact from "../Contact/contact";
+import { withHeader, withAudio } from "../../HOC";
+
+const Preview = lazy(() => import("../Preview"));
+const About = lazy(() => import("../About"));
+const Skills = lazy(() => import("../Skills"));
+const Experience = lazy(() => import("../Experience"));
+const Projects = lazy(() => import("../Projects"));
+const Contact = lazy(() => import("../Contact"));
 
 const Home = () => {
   return (
-    <div className="home-page-container">
-      <Preview />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+    <Suspense fallback={<Loader hasWrapper />}>
+      <div className="home-page-container">
+        <Preview />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
+    </Suspense>
   );
 };
 
-export default Home;
+export default withHeader(withAudio(Home));
