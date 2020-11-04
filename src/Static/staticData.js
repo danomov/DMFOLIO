@@ -103,6 +103,17 @@ const data = {
         ],
       },
       {
+        name: "BRIDGEVIEW Website",
+        description: `Bridgeview is a Residential Complex located in Davitashen district in Yerevan, Armenia. 
+        BRIDGEVIEW website is a multipage interactive website, which was built to help people to explore more about 
+        this complex and also choose an apartment for themselves.`,
+        links: [
+          {
+            link: "https://bridgeview.am/",
+          },
+        ],
+      },
+      {
         name: "Nextstack Website",
         description: `A small dynamic website for IT company, 
         where you can investigate the company's portfolio and career opportunities.`,
@@ -160,6 +171,7 @@ const data = {
         ],
       },
     ],
+    initialShowProjects: 4,
   },
   contacts: {
     title: "Contact",

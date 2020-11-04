@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "../../Static";
 import "./skills.scss";
 
-export default function Skills() {
+const Skills = () => {
   const { skills } = data;
 
   return (
@@ -10,6 +10,8 @@ export default function Skills() {
       id="skills"
       className="skills-container"
       data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
     >
@@ -26,3 +28,5 @@ export default function Skills() {
     </section>
   );
 }
+
+export default Skills;

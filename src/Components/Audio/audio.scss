@@ -1,0 +1,18 @@
+button.audio-control {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/icons/volume-up.svg") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 6;
+
+  &.muted {
+    background: url("../../assets/icons/no-sound.svg") no-repeat center;
+    background-size: contain;
+  }
+}
