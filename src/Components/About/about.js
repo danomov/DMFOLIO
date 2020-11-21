@@ -12,13 +12,13 @@ const About = () => {
       className="about-container"
       data-aos="fade-up"
       data-aos-delay="300"
-      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
+      data-testid="test-about"
     >
       <h1>{about.title}</h1>
       <div className="about inner-wrapper">
-        <div className="about-text">
+        <div className="about-text" data-testid="test-about-text">
           <p>{about.description}</p>
         </div>
         <Image

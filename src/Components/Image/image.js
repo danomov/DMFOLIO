@@ -2,7 +2,12 @@ import React, {useCallback, useState} from "react";
 import './image.scss';
 import Loader from "../Loader";
 
-const Image = ({ src, alt, containerClassName = "", className = "" }) => {
+const Image = ({
+ src,
+ alt,
+ containerClassName = "",
+ className = ""
+}) => {
     const [isLoadingImage, setIsLoadingImage] = useState(true);
 
     const handleSetImageStatus = useCallback(() => {

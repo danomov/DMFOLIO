@@ -1,27 +1,22 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useRef } from "react";
 import background_music from "../../assets/audio/background_music.mp3";
 import "./audio.scss";
 
 const Audio = () => {
   const [isMuted, setIsMuted] = useState(true);
-
-  const handleGetAudioPlayer = useCallback(() => {
-    return document.querySelector("audio");
-  }, [])
+  const audio = useRef(null);
 
   const handleAudioMuteControls = useCallback(() => {
-    const audio = handleGetAudioPlayer();
     setIsMuted(!isMuted)
-
-    if (isMuted) return audio.play();
-    audio.pause();
-  }, [isMuted, setIsMuted, handleGetAudioPlayer])
+    if (isMuted) return audio.current.play();
+    audio.current.pause();
+  }, [isMuted, setIsMuted])
 
   return (
     <>
-      <audio src={background_music} loop />
+      <audio ref={audio} src={background_music} loop data-testid="test-audio" />
       <button
-        className={`audio-control ${isMuted ? "muted" : ""}`}
+        className={`audio-control${isMuted ? " muted" : ""}`}
         onClick={handleAudioMuteControls}
       />
     </>
