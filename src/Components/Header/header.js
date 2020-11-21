@@ -33,15 +33,15 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header data-testid="test-header">
       <Link to="/" id="logo" />
       <nav
-        className={`${isMobile ? "mobile-menu" : ""} ${
+        className={`${isMobile ? "mobile-menu " : ""}${
           isMenuOpen && isMobile ? "open" : ""
         }`}
       >
         <ul>
-          {headerList.map((headerEl) => (
+          {headerList.map(headerEl => (
             <li key={Math.random() * 500}>
               <a href={`/#${headerEl.toLowerCase()}`}>{headerEl}</a>
             </li>

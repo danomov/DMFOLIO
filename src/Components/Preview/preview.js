@@ -19,15 +19,15 @@ const Preview = () => {
       className="preview-container"
       data-aos="fade-up"
       data-aos-delay="300"
-      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
+      data-testid="test-preview"
     >
       <div className="preview inner-wrapper">
         <div className="preview-text-container">
           <h1>{preview.part1}</h1>
           <h2>{preview.part2}</h2>
-          <div className="description-container">
+          <div className="description-container" data-testid="test-desc-container">
             <p>{preview.part3}</p>
           </div>
         </div>
