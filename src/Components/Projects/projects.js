@@ -17,13 +17,13 @@ const Projects = () => {
       className="projects-container"
       data-aos="fade-up"
       data-aos-delay="300"
-      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
+      data-testid="test-projects"
     >
       <div className="projects inner-wrapper">
         <h1>{projects.title}</h1>
-        <div className="project-list-container">
+        <div className="project-list-container" data-testid="test-project-list-container">
           {projects.projectList
             .slice(0, isShowingAll ? -1 : projects.initialShowProjects)
             .map(project => (

@@ -11,8 +11,7 @@
 # production
 /build
 .firebaserc
-.github
-.idea
+/.idea
 # misc
 .DS_Store
 .env.local

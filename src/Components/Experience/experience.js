@@ -24,9 +24,9 @@ const Experience = () => {
       className="experience-container"
       data-aos="fade-up"
       data-aos-delay="300"
-      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
+      data-testid="test-experience"
     >
       <div className="experience inner-wrapper">
         <h1>{experience.title}</h1>

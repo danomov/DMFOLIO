@@ -15,14 +15,14 @@ const Button = ({
     <div className="btn-wrapper">
       {type === "button" ? (
         <button
-          className={`${className} ${hasHover && "hover"} shine`}
+          className={`${className}${hasHover ? " hover" : ""} shine`}
           onClick={onClick}
           {...props}
         >
           {content || children}
         </button>
       ) : (
-        <a className={`${className} ${hasHover && "hover"}`} href={link} {...props}>
+        <a className={`${className}${hasHover ? " hover" : ""}`} href={link} {...props}>
           {content}
         </a>
       )}
