@@ -22,15 +22,15 @@ const Contact = () => {
       className="contacts-container"
       data-aos="fade-up"
       data-aos-delay="300"
-      data-aos-offset="400"
       data-aos-duration="800"
       data-aos-once={true}
+      data-testid="test-contact"
     >
       <div className="contacts inner-wrapper">
         <div className="contact-list-container">
           <h1>{contacts.info.title}</h1>
           <p>{contacts.info.description}</p>
-          <div className="social-items-container">
+          <div className="social-items-container" data-testid="test-social-container">
             {contacts.info.social.map(socialLink => (
               <div className="social-item" key={Math.random() * 500}>
                 <a
@@ -48,6 +48,7 @@ const Contact = () => {
           <div className="contact-me-btn-container">
             <Button
               className="call-btn"
+              data-testid="call-btn"
               type="link"
               content="Let's Talk"
               link={`tel:${contacts.info.phone}`}
@@ -55,6 +56,7 @@ const Contact = () => {
             />
             <Button
               className="mail-btn"
+              data-testid="mail-btn"
               type="link"
               content="Let's Chat"
               link={`mailto:${contacts.info.mail}`}
@@ -63,9 +65,10 @@ const Contact = () => {
           </div>
           <Button
             className="resume-btn"
+            data-testid="resume-btn"
             type="link"
             content="Resume"
-            link="https://drive.google.com/file/d/1jwCkpzKIuwl_IM_-qFfhEN1Sehg3pXoK/view?usp=sharing"
+            link={contacts.info.resumeLink}
             hasHover
             target="_blank"
             rel="noopener noreferrer"
