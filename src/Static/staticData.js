@@ -176,7 +176,7 @@ const data = {
         "https://medium.com/@danielmovsesyan",
         "https://www.facebook.com/danomov/",
       ],
-      resumeLink: "https://drive.google.com/file/d/1MukZvHDN9aEV6Lpl4Fl22RtHI0NKi8pH/view?usp=sharing",
+      resumeLink: "https://drive.google.com/file/d/1Tis67Omv7MNWCrqZzJElwZ7SyKnwECr4/view?usp=sharing",
     },
   },
 };
