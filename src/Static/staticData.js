@@ -83,17 +83,6 @@ const data = {
     title: "Projects",
     projectList: [
       {
-        name: "Cheng-Tsui App",
-        description: `Cheng & Tsui is the leading publisher of Asian language learning textbooks & multimedia educational materials.
-        Cheng-Tsui (CT) App is an "online school" for teaching your students or learning th Asian language with Cheng & Tsui 
-        books with your classmates.`,
-        links: [
-          {
-            link: "https://app.chengtsui.co/",
-          },
-        ],
-      },
-      {
         name: "4Tat Website",
         description: `4Tat is a simple, but modern online store where you can find food for your lovely pets.`,
         links: [
@@ -187,7 +176,7 @@ const data = {
         "https://medium.com/@danielmovsesyan",
         "https://www.facebook.com/danomov/",
       ],
-      resumeLink: "https://drive.google.com/file/d/1jwCkpzKIuwl_IM_-qFfhEN1Sehg3pXoK/view?usp=sharing",
+      resumeLink: "https://drive.google.com/file/d/1Tis67Omv7MNWCrqZzJElwZ7SyKnwECr4/view?usp=sharing",
     },
   },
 };
